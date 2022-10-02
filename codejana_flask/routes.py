@@ -17,6 +17,18 @@ def homepage():
 def about():
     return render_template('about.html', title='About')
 
+@app.route('/aboutAna')
+def aboutAna():
+    return render_template('AboutAna.html', title='AboutAna')
+
+@app.route('/aboutIvan')
+def aboutIvan():
+    return render_template('AboutIvan.html', title='AboutIvan')
+
+@app.route('/aboutJulio')
+def aboutJulio():
+    return render_template('AboutJulio.html', title='AboutJulio')
+
 
 @app.route('/games')
 def games():
@@ -46,3 +58,19 @@ def login():
             flash (f'Login insatisfactorio{form.email.data}',category ='danger')
             return redirect(url_for('homepage'))
     return render_template('login.html', title='LogIn',form=form)
+
+@app.route('/ElliotP')
+def ElliotP():
+    return render_template('ElliotP.html', title='ElliotP')
+
+@app.route('/AnaP')
+def AnaP():
+    return render_template('AnaP.html', title='AnaP')
+
+@app.route('/JulioP')
+def JulioP():
+    return render_template('JulioP.html', title='JulioP')
+
+@app.route('/IvanP')
+def IvanP():
+    return render_template('IvanP.html', title='IvanP')
